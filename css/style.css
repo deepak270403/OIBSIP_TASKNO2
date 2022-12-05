@@ -1,0 +1,401 @@
+:root {
+    --color-primary: #101010;
+    --color-secondary: white;
+    --color-tertiary: #dddddd;
+    --color-text-primary: #303030;
+    --color-text-secondary: #505050;
+    --font-light: 300;
+    --font-bold: 500;
+    --font-black: 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--color-text-primary);
+}
+
+header {
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+nav {
+    align-items: center;
+
+    height: 2.5rem;
+    width: 100%;
+
+    font-weight: var(--font-light);
+    letter-spacing: 1px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: var(--font-bold);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: var(--font-light);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+
+    height: 8rem;
+
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+abbr {
+    text-decoration-line: none;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration-line: none;
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 6rem;
+}
+
+.height-full, .avengers-icon {
+    height: 100%;
+    margin-top: 25px;
+    z-index: 1;
+}
+
+.height-half, .menu-icon {
+    height: 50%;
+}
+
+.flex-row, .navigation, .nav-wrapper, .contact {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-button {
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+}
+
+.position-relative, .image-container {
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    width: max-content;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+.img-caption {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+
+    text-align: center;
+    font-weight: 200;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 8rem 0;
+}
+
+.famous-line {
+    display: flex;
+    flex: 1;
+    font-weight: var(--font-black);
+    font-size: 3rem;
+}
+
+.biography {
+    display: flex;
+    flex: 2;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8rem 4rem;
+}
+
+.section-title {
+    font-weight: var(--font-black);
+    font-size: 2rem;
+    margin: 4rem 0;
+}
+
+.timeline-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 7rem;
+    padding: 0 10rem;
+}
+
+.flex-element, .timeline-item {
+    flex: 1;
+}
+
+.left-item {
+    order: 1;
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.right-item {
+    order: 2;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.timeline-section::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: var(--color-text-primary);
+}
+
+.timeline-section::after {
+    content: "";
+    position: absolute;
+    right: calc(50% - 3px);
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: var(--color-text-primary);
+}
+
+.link {
+    color: var(--color-text-primary);
+    text-decoration-line: none;
+}
+
+.row{
+    margin: 10px;
+}
+
+.section-gallery {
+    font-weight: var(--font-black);
+    font-size: 2rem;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+
+    border-radius: 0.25rem;
+    margin-right: 0.3rem;
+
+    background-color: var(--color-text-secondary);
+}
+
+.footer-icon {
+    height: 80%;
+    width: 80%;
+}
+
+.footer-section {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.last-words-container {
+    background-color: var(--color-tertiary);
+}
+
+.footer-title {
+    color: var(--color-text-secondary)
+}
+
+@media screen and (max-width: 1200px)
+{
+    .timeline-section {
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 1024px)
+{
+    .title {
+        transform: translate(50%, 40%);
+    }
+
+    .main-container {
+        padding: 4rem 5rem 0;
+    }
+
+    .biography {
+        flex: 1;
+    }
+
+    .timeline-section {
+        height: 9rem;
+        padding: 0;
+    }
+
+    .section-container {
+        padding: 0 5rem 4rem;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    h1 {
+        font-size: 6rem;
+    }
+
+    .main-container {
+        padding: 3rem 4rem 0;
+    }
+
+    .biography {
+        flex: 1;
+    }
+
+    .timeline-section {
+        height: 10rem;
+    }
+
+    .section-container {
+        padding: 0 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    
+        height: 12rem;
+        padding: 2rem 2rem;
+    
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    .icon-wrapper {
+        flex: 1;
+        align-items: center;
+    }
+
+    .nav-button {
+        flex: 1;
+        width: min-content;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-wrapper {
+        flex: 5;
+    }
+
+    .main-container {
+        flex-direction: column;
+        padding: 2rem 2rem 0;
+    }
+
+    .section-title {
+        margin: 2rem 0;
+    }
+
+    .famous-line {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .section-container {
+        padding: 0 1rem 4rem;
+    }
+
+    .left-item {
+        margin-right: 1rem;
+    }
+    
+    .right-item {
+        margin-left: 1rem;
+    }
+
+    .link-container {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .img-caption {
+        font-size: 0.8rem;
+    }
+
+    .main-container {
+        flex-direction: column;
+        padding: 1rem 1rem 0;
+    }
+}
